@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "00722ce3778eecbdefc65a10ebf0bba7",
+    "content-hash": "8fa9b54abf62ddd8d8b8b508ff4dbd5e",
     "packages": [
         {
             "name": "dflydev/dot-access-data",
@@ -7836,6 +7836,87 @@
     ],
     "packages-dev": [
         {
+            "name": "composer/semver",
+            "version": "3.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/composer/semver.git",
+                "reference": "35e8d0af4486141bc745f23a29cc2091eb624a32"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/composer/semver/zipball/35e8d0af4486141bc745f23a29cc2091eb624a32",
+                "reference": "35e8d0af4486141bc745f23a29cc2091eb624a32",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.2 || ^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^1.4",
+                "symfony/phpunit-bridge": "^4.2 || ^5"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Composer\\Semver\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nils Adermann",
+                    "email": "naderman@naderman.de",
+                    "homepage": "http://www.naderman.de"
+                },
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                },
+                {
+                    "name": "Rob Bast",
+                    "email": "rob.bast@gmail.com",
+                    "homepage": "http://robbast.nl"
+                }
+            ],
+            "description": "Semver library that offers utilities, version constraint parsing and validation.",
+            "keywords": [
+                "semantic",
+                "semver",
+                "validation",
+                "versioning"
+            ],
+            "support": {
+                "irc": "ircs://irc.libera.chat:6697/composer",
+                "issues": "https://github.com/composer/semver/issues",
+                "source": "https://github.com/composer/semver/tree/3.4.0"
+            },
+            "funding": [
+                {
+                    "url": "https://packagist.com",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/composer",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/composer/composer",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-08-31T09:50:34+00:00"
+        },
+        {
             "name": "dama/doctrine-test-bundle",
             "version": "v7.2.1",
             "source": {
@@ -8068,6 +8149,161 @@
             "time": "2023-05-02T15:12:16+00:00"
         },
         {
+            "name": "guzzlehttp/psr7",
+            "version": "2.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/guzzle/psr7.git",
+                "reference": "be45764272e8873c72dbe3d2edcfdfcc3bc9f727"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/be45764272e8873c72dbe3d2edcfdfcc3bc9f727",
+                "reference": "be45764272e8873c72dbe3d2edcfdfcc3bc9f727",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2.5 || ^8.0",
+                "psr/http-factory": "^1.0",
+                "psr/http-message": "^1.1 || ^2.0",
+                "ralouphie/getallheaders": "^3.0"
+            },
+            "provide": {
+                "psr/http-factory-implementation": "1.0",
+                "psr/http-message-implementation": "1.0"
+            },
+            "require-dev": {
+                "bamarni/composer-bin-plugin": "^1.8.1",
+                "http-interop/http-factory-tests": "^0.9",
+                "phpunit/phpunit": "^8.5.29 || ^9.5.23"
+            },
+            "suggest": {
+                "laminas/laminas-httphandlerrunner": "Emit PSR-7 responses"
+            },
+            "type": "library",
+            "extra": {
+                "bamarni-bin": {
+                    "bin-links": true,
+                    "forward-command": false
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "GuzzleHttp\\Psr7\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Graham Campbell",
+                    "email": "hello@gjcampbell.co.uk",
+                    "homepage": "https://github.com/GrahamCampbell"
+                },
+                {
+                    "name": "Michael Dowling",
+                    "email": "mtdowling@gmail.com",
+                    "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "George Mponos",
+                    "email": "gmponos@gmail.com",
+                    "homepage": "https://github.com/gmponos"
+                },
+                {
+                    "name": "Tobias Nyholm",
+                    "email": "tobias.nyholm@gmail.com",
+                    "homepage": "https://github.com/Nyholm"
+                },
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com",
+                    "homepage": "https://github.com/sagikazarmark"
+                },
+                {
+                    "name": "Tobias Schultze",
+                    "email": "webmaster@tubo-world.de",
+                    "homepage": "https://github.com/Tobion"
+                },
+                {
+                    "name": "Márk Sági-Kazár",
+                    "email": "mark.sagikazar@gmail.com",
+                    "homepage": "https://sagikazarmark.hu"
+                }
+            ],
+            "description": "PSR-7 message implementation that also provides common utility methods",
+            "keywords": [
+                "http",
+                "message",
+                "psr-7",
+                "request",
+                "response",
+                "stream",
+                "uri",
+                "url"
+            ],
+            "support": {
+                "issues": "https://github.com/guzzle/psr7/issues",
+                "source": "https://github.com/guzzle/psr7/tree/2.6.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/GrahamCampbell",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/Nyholm",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/guzzlehttp/psr7",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-08-27T10:13:57+00:00"
+        },
+        {
+            "name": "leongrdic/smplang",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/leongrdic/php-smplang.git",
+                "reference": "dd8663b9bc576de0d146c166555babd2b6e9b48b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/leongrdic/php-smplang/zipball/dd8663b9bc576de0d146c166555babd2b6e9b48b",
+                "reference": "dd8663b9bc576de0d146c166555babd2b6e9b48b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^v3.8",
+                "pestphp/pest": "^1.21"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Le\\SMPLang\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A simple language written in PHP that evaluates expressions without eval",
+            "homepage": "https://github.com/leongrdic/php-smplang",
+            "support": {
+                "issues": "https://github.com/leongrdic/php-smplang/issues",
+                "source": "https://github.com/leongrdic/php-smplang/tree/1.0.2"
+            },
+            "time": "2022-07-12T13:21:45+00:00"
+        },
+        {
             "name": "nikic/php-parser",
             "version": "v4.15.5",
             "source": {
@@ -8122,6 +8358,102 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v4.15.5"
             },
             "time": "2023-05-19T20:20:00+00:00"
+        },
+        {
+            "name": "pact-foundation/pact-php",
+            "version": "10.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pact-foundation/pact-php.git",
+                "reference": "a6f616cd10593674c055ae72d3015e7466b75a9e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pact-foundation/pact-php/zipball/a6f616cd10593674c055ae72d3015e7466b75a9e",
+                "reference": "a6f616cd10593674c055ae72d3015e7466b75a9e",
+                "shasum": ""
+            },
+            "require": {
+                "composer/semver": "^1.4.0|^3.2.0",
+                "ext-json": "*",
+                "guzzlehttp/psr7": "^2.4.5",
+                "php": "^8.0",
+                "symfony/process": "^4.4|^5.4|^6.0",
+                "tienvx/composer-downloads-plugin": "^1.2.0"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "guzzlehttp/guzzle": "^7.8",
+                "php-amqplib/php-amqplib": "^3.0",
+                "phpstan/phpstan": "^1.9",
+                "phpunit/phpunit": ">=8.5.23 <10",
+                "roave/security-advisories": "dev-latest",
+                "slim/psr7": "^1.2.0",
+                "slim/slim": "^4.6",
+                "tienvx/pact-php-xml": "^0.1"
+            },
+            "type": "library",
+            "extra": {
+                "downloads": {
+                    "pact-ffi-headers": {
+                        "version": "0.4.9",
+                        "url": "https://github.com/pact-foundation/pact-reference/releases/download/libpact_ffi-v{$version}/pact.h",
+                        "path": "bin/pact-ffi-headers/pact.h"
+                    },
+                    "pact-ffi-lib": {
+                        "version": "0.4.9",
+                        "variables": {
+                            "{$prefix}": "PHP_OS_FAMILY === 'Windows' ? 'pact_ffi' : 'libpact_ffi'",
+                            "{$os}": "PHP_OS === 'Darwin' ? 'osx' : strtolower(PHP_OS_FAMILY)",
+                            "{$architecture}": "in_array(php_uname('m'), ['arm64', 'aarch64']) ? (PHP_OS === 'Darwin' ? 'aarch64-apple-darwin' : 'aarch64') : 'x86_64'",
+                            "{$extension}": "PHP_OS_FAMILY === 'Windows' ? 'dll' : (PHP_OS === 'Darwin' ? 'dylib' : 'so')"
+                        },
+                        "url": "https://github.com/pact-foundation/pact-reference/releases/download/libpact_ffi-v{$version}/{$prefix}-{$os}-{$architecture}.{$extension}.gz",
+                        "path": "bin/pact-ffi-lib/pact.{$extension}"
+                    },
+                    "pact-stub-server": {
+                        "version": "0.5.3",
+                        "variables": {
+                            "{$os}": "PHP_OS === 'Darwin' ? 'osx' : strtolower(PHP_OS_FAMILY)",
+                            "{$architecture}": "in_array(php_uname('m'), ['arm64', 'aarch64']) ? 'aarch64' : 'x86_64'",
+                            "{$extension}": "PHP_OS_FAMILY === 'Windows' ? '.exe' : ''"
+                        },
+                        "url": "https://github.com/pact-foundation/pact-stub-server/releases/download/v{$version}/pact-stub-server-{$os}-{$architecture}{$extension}.gz",
+                        "path": "bin/pact-stub-server/pact-stub-server{$extension}",
+                        "executable": true
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PhpPact\\": "src/PhpPact"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mattermack",
+                    "email": "c.f.mack@gmail.com"
+                },
+                {
+                    "name": "Nicholas Brink",
+                    "email": "nick.brink@mattersight.com"
+                }
+            ],
+            "description": "Enables consumer driven contract testing, following the PACT foundation principles.",
+            "homepage": "https://github.com/pact-foundation/pact-php",
+            "keywords": [
+                "pact",
+                "pact-php"
+            ],
+            "support": {
+                "issues": "https://github.com/pact-foundation/pact-php/issues",
+                "source": "https://github.com/pact-foundation/pact-php/tree/10.0.0-alpha3"
+            },
+            "time": "2023-10-13T17:09:58+00:00"
         },
         {
             "name": "phpstan/extension-installer",
@@ -8369,6 +8701,105 @@
                 "source": "https://github.com/phpstan/phpstan-symfony/tree/1.3.2"
             },
             "time": "2023-05-16T12:46:15+00:00"
+        },
+        {
+            "name": "psr/http-factory",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-factory.git",
+                "reference": "e616d01114759c4c489f93b099585439f795fe35"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/e616d01114759c4c489f93b099585439f795fe35",
+                "reference": "e616d01114759c4c489f93b099585439f795fe35",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0",
+                "psr/http-message": "^1.0 || ^2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interfaces for PSR-7 HTTP message factories",
+            "keywords": [
+                "factory",
+                "http",
+                "message",
+                "psr",
+                "psr-17",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/http-factory/tree/1.0.2"
+            },
+            "time": "2023-04-10T20:10:41+00:00"
+        },
+        {
+            "name": "ralouphie/getallheaders",
+            "version": "3.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ralouphie/getallheaders.git",
+                "reference": "120b605dfeb996808c31b6477290a714d356e822"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/120b605dfeb996808c31b6477290a714d356e822",
+                "reference": "120b605dfeb996808c31b6477290a714d356e822",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^5 || ^6.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/getallheaders.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ralph Khattar",
+                    "email": "ralph.khattar@gmail.com"
+                }
+            ],
+            "description": "A polyfill for getallheaders.",
+            "support": {
+                "issues": "https://github.com/ralouphie/getallheaders/issues",
+                "source": "https://github.com/ralouphie/getallheaders/tree/develop"
+            },
+            "time": "2019-03-08T08:55:37+00:00"
         },
         {
             "name": "symfony/browser-kit",
@@ -8819,6 +9250,67 @@
             "time": "2023-05-30T09:01:24+00:00"
         },
         {
+            "name": "symfony/process",
+            "version": "v6.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/process.git",
+                "reference": "8741e3ed7fe2e91ec099e02446fb86667a0f1628"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/process/zipball/8741e3ed7fe2e91ec099e02446fb86667a0f1628",
+                "reference": "8741e3ed7fe2e91ec099e02446fb86667a0f1628",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Process\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Executes commands in sub-processes",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/process/tree/v6.3.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2023-05-19T08:06:44+00:00"
+        },
+        {
             "name": "symfony/web-profiler-bundle",
             "version": "v6.3.0",
             "source": {
@@ -8898,11 +9390,73 @@
                 }
             ],
             "time": "2023-05-22T17:08:58+00:00"
+        },
+        {
+            "name": "tienvx/composer-downloads-plugin",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tienvx/composer-downloads-plugin.git",
+                "reference": "133f4e10ceca114ad6ecd8995bdf224428208f84"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tienvx/composer-downloads-plugin/zipball/133f4e10ceca114ad6ecd8995bdf224428208f84",
+                "reference": "133f4e10ceca114ad6ecd8995bdf224428208f84",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1 || ^2.0",
+                "leongrdic/smplang": "^1.0.2",
+                "php": "^8.0",
+                "symfony/filesystem": "^5.4 || ^6.0",
+                "symfony/finder": "^4.4.23 || ^5.4 || ^6.0"
+            },
+            "require-dev": {
+                "composer/composer": "^1.10.26 || ^2.2",
+                "php-vfs/php-vfs": "^1.4",
+                "phpunit/phpunit": "^9.5.10",
+                "symfony/process": "^4.4 || ^5.4 || ^6.0"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "LastCall\\DownloadsPlugin\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "LastCall\\DownloadsPlugin\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rob Bayliss",
+                    "email": "rob@lastcallmedia.com"
+                },
+                {
+                    "name": "Tim Otten",
+                    "email": "totten@civicrm.org"
+                },
+                {
+                    "name": "Tien Vo",
+                    "email": "tien.xuan.vo@gmail.com"
+                }
+            ],
+            "description": "Composer plugin for downloading additional files within any composer package.",
+            "support": {
+                "source": "https://github.com/tienvx/composer-downloads-plugin/tree/v1.3.0"
+            },
+            "time": "2023-01-11T01:11:22+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "pact-foundation/pact-php": 15
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
@@ -8913,5 +9467,5 @@
     "platform-overrides": {
         "php": "8.1.0"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

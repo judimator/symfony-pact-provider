@@ -80,6 +80,107 @@ $ cd my_project/
 $ ./bin/phpunit
 ```
 
+# PACT
+
+## Run provider
+
+```bash
+$ docker-compose up
+````
+
+## Run tests
+
+```bash
+$ bin/phpunit tests/Consumer/ConsumerTest.php
+```
+
+### Publish contract
+
+```bash
+$ docker run --rm --network=host \
+    -w /pacts \
+    -v ./pacts:/pacts \
+    pactfoundation/pact-cli:latest \
+    publish /pacts/fake-consumer-fake-provider.json \
+    --broker-base-url=http://localhost:8080 \
+    --broker-username=username \
+    --broker-password=password \
+    --consumer-app-version=fake-git-sha-for-demo-123
+```
+
+### Can-i-deploy
+
+```bash
+$ docker run --rm --network=host \
+    pactfoundation/pact-cli:latest \
+    pact-broker can-i-deploy \
+    --broker-base-url=http://localhost:8080 \
+    --broker-username=username \
+    --broker-password=password \
+    --pacticipant=fake-consumer \
+    --version=fake-git-sha-for-demo-123
+```
+
+### Create environment
+
+```bash
+$ docker run --rm --network=host \
+    pactfoundation/pact-cli:latest \
+    pact-broker create-environment \
+    --name=prod \
+    --broker-base-url=http://localhost:8080 \
+    --broker-username=username \
+    --broker-password=password
+```
+
+### Record deployment for provider
+
+
+```bash
+$ docker run --rm --network=host \
+    pactfoundation/pact-cli:latest \
+    pact-broker record-deployment \
+    --pacticipant fake-provider \
+    --version fake-git-sha-for-demo-456 \
+    --environment prod \
+    --broker-base-url=http://localhost:8080 \
+    --broker-username=username \
+    --broker-password=password
+
+```
+
+### Record deployment for consumer
+
+
+```bash
+$ docker run --rm --network=host \
+    pactfoundation/pact-cli:latest \
+    pact-broker record-deployment \
+    --pacticipant fake-consumer \
+    --version fake-git-sha-for-demo-123 \
+    --environment prod \
+    --broker-base-url=http://localhost:8080 \
+    --broker-username=username \
+    --broker-password=password
+
+```
+
+### Create/Update pacticipant
+
+```bash
+$ docker run --rm --network=host \
+    pactfoundation/pact-cli:latest \
+    pact-broker create-or-update-pacticipant \
+    --name fake-provider \
+    --main-branch main \
+    --broker-base-url=http://localhost:8080 \
+    --broker-username=username \
+    --broker-password=password
+```
+
+
+
+
 [1]: https://symfony.com/doc/current/best_practices.html
 [2]: https://symfony.com/doc/current/setup.html#technical-requirements
 [3]: https://symfony.com/doc/current/setup/web_server_configuration.html

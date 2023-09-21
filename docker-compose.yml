@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+    pact_provider:
+        ports:
+            - "8000:8000"
+        build:
+            context: .
+            dockerfile: ./docker/Dockerfile.fpm
+        volumes:
+            - ./:/var/www/app
+
+    postgres:
+        image: postgres
+        ports:
+            - "5432:5432"
+        environment:
+            POSTGRES_USER: postgres
+            POSTGRES_PASSWORD: password
+            POSTGRES_DB: pact_broker
+
+    broker:
+        image: dius/pact-broker
+        ports:
+            - "8080:80"
+        links:
+            - postgres
+        environment:
+            PACT_BROKER_BASIC_AUTH_USERNAME: username
+            PACT_BROKER_BASIC_AUTH_PASSWORD: password
+            PACT_BROKER_DATABASE_USERNAME: postgres
+            PACT_BROKER_DATABASE_PASSWORD: password
+            PACT_BROKER_DATABASE_HOST: postgres
+            PACT_BROKER_DATABASE_NAME: pact_broker

@@ -1,0 +1,74 @@
+{
+  "consumer": {
+    "name": "fake-consumer"
+  },
+  "interactions": [
+    {
+      "description": "Get products by SKU",
+      "pending": false,
+      "providerStates": [
+        {
+          "name": "Product exists",
+          "params": {
+            "name": "Test product 1",
+            "sku": 12345
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/en/products",
+        "query": {
+          "sku": [
+            "12345"
+          ]
+        }
+      },
+      "response": {
+        "body": {
+          "content": {
+            "id": 13,
+            "name": "Test product 1",
+            "sku": "12345"
+          },
+          "contentType": "application/json",
+          "encoded": false
+        },
+        "headers": {
+          "Content-Type": [
+            "application/json"
+          ]
+        },
+        "matchingRules": {
+          "body": {
+            "$.id": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          },
+          "header": {}
+        },
+        "status": 200
+      },
+      "transport": "http",
+      "type": "Synchronous/HTTP"
+    }
+  ],
+  "metadata": {
+    "pactRust": {
+      "ffi": "0.4.7",
+      "mockserver": "1.2.3",
+      "models": "1.1.9"
+    },
+    "pactSpecification": {
+      "version": "4.0"
+    }
+  },
+  "provider": {
+    "name": "fake-provider"
+  }
+}

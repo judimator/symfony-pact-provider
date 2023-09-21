@@ -21,3 +21,9 @@ controllers:
         _locale: '%app_locales%'
     defaults:
         _locale: '%locale%'
+
+pact_state:
+    resource:
+        path: '../src/Controller/Pact'
+        namespace: App\Controller\Pact
+    type: attribute

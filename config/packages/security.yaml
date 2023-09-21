@@ -19,6 +19,14 @@ security:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
 
+        product:
+            pattern: ^/products/
+            security: false
+
+        pact_state:
+            pattern: ^/states/
+            security: false
+
         main:
             # this firewall does not have a 'pattern' option because it applies to all URLs
             lazy: true

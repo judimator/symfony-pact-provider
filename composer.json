@@ -1,8 +1,8 @@
 {
-    "name": "symfony/symfony-demo",
+    "name": "judimator/pact-provider",
     "license": "MIT",
     "type": "project",
-    "description": "Symfony Demo Application",
+    "description": "PACT Provider Demo Application",
     "minimum-stability": "stable",
     "prefer-stable": true,
     "replace": {
@@ -50,6 +50,7 @@
     "require-dev": {
         "dama/doctrine-test-bundle": "^7.0",
         "doctrine/doctrine-fixtures-bundle": "^3.4",
+        "pact-foundation/pact-php": "10.0.0-alpha3",
         "phpstan/extension-installer": "^1.2",
         "phpstan/phpstan": "^1.2",
         "phpstan/phpstan-doctrine": "^1.3",
@@ -66,7 +67,8 @@
         "allow-plugins": {
             "symfony/flex": true,
             "symfony/runtime": true,
-            "phpstan/extension-installer": true
+            "phpstan/extension-installer": true,
+            "tienvx/composer-downloads-plugin": true
         },
         "platform": {
             "php": "8.1.0"
